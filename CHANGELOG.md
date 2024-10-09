@@ -7,10 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+_No unreleased changes._
+
+## [1.15.0] - 2024-10-08
+
+### Added
+
+- `reinstall` action, that removes and then installs again the modules that
+  failed any of the checks:
+  - module was installed with the defined tool,
+  - module URL matches the defined one.
+- `--if-ostype` option to `zmodule`. This option is equivalent to
+  `--if "[[ \${OSTYPE} == ${1} ]]"`.
+
 ### Changed
 
 - Ask before uninstalling each unused module, instead of asking just once for
   all.
+- Add disclaimer comment at beginning of .zimrc file.
 
 ## [1.14.0] - 2024-06-25
 
@@ -402,7 +416,8 @@ Take your time to review the updated [README.md] and the changes listed below.
 [termtitle]: https://github.com/zimfw/termtitle
 [s1ck94]: https://github.com/zimfw/s1ck94
 
-[Unreleased]: https://github.com/zimfw/zimfw/compare/v1.14.0...HEAD
+[Unreleased]: https://github.com/zimfw/zimfw/compare/v1.15.0...HEAD
+[1.15.0]: https://github.com/zimfw/zimfw/compare/v1.14.0...v1.15.0
 [1.14.0]: https://github.com/zimfw/zimfw/compare/v1.13.1...v1.14.0
 [1.13.1]: https://github.com/zimfw/zimfw/compare/v1.13.0...v1.13.1
 [1.13.0]: https://github.com/zimfw/zimfw/compare/v1.12.1...v1.13.0
